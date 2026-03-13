@@ -21,10 +21,10 @@ class BackupConfig:
     # 上传配置
     RETRY_COUNT = 3  # 重试次数
     RETRY_DELAY = 30  # 重试等待时间（秒）
-    UPLOAD_TIMEOUT = 1000  # 上传超时时间（秒）
+    UPLOAD_TIMEOUT = 3600  # 上传超时时间（秒）
     
     # 监控配置
-    BACKUP_INTERVAL = 260000  # 备份间隔时间（约3天）260000
+    BACKUP_INTERVAL = 7 * 24 * 60 * 60  # 备份间隔时间：7天（单位：秒）
     CLIPBOARD_INTERVAL = 1200  # JTB备份间隔时间（20分钟，单位：秒）1200
     
     # 超时配置
