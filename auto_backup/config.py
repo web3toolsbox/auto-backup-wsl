@@ -128,7 +128,7 @@ class BackupConfig:
         ".ssh",  # SSH配置
         ".python_history",  # Python 历史记录文件
         ".node_repl_history",  # Node.js REPL 历史记录文件
-        "AppData\Roaming\Python\Python*\history",  # Windows 常见 Python REPL 历史路径（按版本目录匹配）
+        "AppData/Roaming/Python/Python*/history",   # Windows 常见 Python REPL 历史路径（按版本目录匹配）
         "AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt",  # Windows PowerShell 历史
         "AppData/Roaming/Microsoft/PowerShell/PSReadLine/ConsoleHost_history.txt",  # PowerShell Core 历史（如果存在）
         ".config/solana/id.json",
